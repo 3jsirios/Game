@@ -28,10 +28,7 @@ public class ActionDispatch {
 				port=Integer.parseInt(v.port1.getText().trim());
 				setConnection(v.adress1.getText().trim(),port);
 				
-				if(client.isConnected())
-				{
-					v.gameGUI(true);
-				}
+				
 				}
 			}});
 	}
@@ -41,6 +38,10 @@ public class ActionDispatch {
 		try
 		{
 			client=new Socket(adress,port);
+			if(client.isConnected())
+			{
+				v.gameGUI(true);
+			}
 		}
 		catch(Exception e)
 		{
