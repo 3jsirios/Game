@@ -15,7 +15,7 @@ public class View extends JFrame {
 
 	public static JPanel gamePane,cardPane,chatPane,autorizePane;
 	public static JLabel port,adress,name;
-	public static JButton autorize,send;
+	public JButton autorize,send;
 	public static JTextField port1,adress1,name1,message;
 	public static JTextArea memo;
 	public static Container container;
@@ -34,24 +34,24 @@ public class View extends JFrame {
 		container = this.getContentPane();
 		setSize(screenWidth, screenHeight);
 		
-		JButton autorize=new JButton("Autorize");
-		JButton send=new JButton("Send");
+		autorize=new JButton("Autorize");
+		send=new JButton("Send");
 		
-		JLabel port=new JLabel("Port");
-		JLabel adress=new JLabel("Host");
-		JLabel name=new JLabel("Name");
+		port=new JLabel("Port");
+		adress=new JLabel("Host");
+		name=new JLabel("Name");
 		
-		JTextField port1=new JTextField(10);
-		JTextField adress1=new JTextField(10);
-		JTextField name1=new JTextField(10);
-		JTextField message=new JTextField(10);
+		port1=new JTextField(10);
+		adress1=new JTextField(10);
+		name1=new JTextField(10);
+		message=new JTextField(10);
 		
 		JTextArea memo=new JTextArea(20,10);
 		
-		JPanel cardPane=new JPanel();
-		JPanel chatPane=new JPanel();
-		JPanel gamePane=new JPanel();
-		JPanel autorizePane =new JPanel();
+		cardPane=new JPanel();
+		chatPane=new JPanel();
+		gamePane=new JPanel();
+		autorizePane =new JPanel();
 		
 		
 		//autorize Panel
@@ -85,11 +85,6 @@ public class View extends JFrame {
 		cardPane.setBackground(Color.LIGHT_GRAY);
 		gamePane.setBackground(Color.ORANGE);
 		
-		//Visible
-		group.setVisible(false);
-		gamePane.setVisible(false);
-		autorizePane.setVisible(true);
-		
 		
 		
 		
@@ -103,6 +98,7 @@ public class View extends JFrame {
 			gamePane.setVisible(true);
 			autorizePane.setVisible(false);
 			container.setLayout(new GridLayout(2,1));
+			container.remove(autorizePane);
 
 		}
 		else
