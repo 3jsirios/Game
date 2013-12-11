@@ -1,0 +1,10 @@
+**/Game/bin
+**/Server/bin
+
+Game/.classpath
+Game/.project
+Game/.settings/org.eclipse.jdt.core.prefs
+
+Server/.classpath
+Server/.project
+Server/.settings/org.eclipse.jdt.core.prefs
