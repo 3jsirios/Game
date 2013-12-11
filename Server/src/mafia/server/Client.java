@@ -40,6 +40,7 @@ public class Client extends Thread{
 	
 	public void send(String str){
 		out.println(str);
+		Frame.println("Mesege sended to "+ id +" message: " + str);
 	}
 	public void closeConection(){
 		isConected =false;

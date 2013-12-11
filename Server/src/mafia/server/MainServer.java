@@ -14,6 +14,7 @@ public class MainServer {
 		ViewController viewController = new ViewController(frame, serverSocket);
 		frame.show();
 		
+		
 	}
 
 }
